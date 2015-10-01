@@ -5,4 +5,4 @@ setup(name = "sttalign",
     description = "Alignment of speech-to-text output with a known transcript",
     author = "Chris Baume",
     author_email = "chris.baume@bbc.co.uk",
-    packages = ['sttalign']) 
+    py_modules = ['sttalign'])
