@@ -51,5 +51,15 @@ def alignJSON(sttFilename, transcriptFilename):
     # align words
     aligned = alignWords(sttData, transcriptText.split())
 
-    # save as JSON
+    return {'text': transcriptText, 'words': aligned}
+
+def alignJSONText(sttFilename, transcriptText):
+
+    # load JSON data
+    with open(sttFilename) as sttFile:
+        sttData=json.load(sttFile)['words']
+
+    # align words
+    aligned = alignWords(sttData, transcriptText.split())
+
     return {'text': transcriptText, 'words': aligned}
